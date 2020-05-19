@@ -1,0 +1,55 @@
+****************************************
+TimeStamp->new log: 05/09/2020, 20:29:05
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
+****************************************
+TimeStamp->new log: 05/09/2020, 20:30:07
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
+****************************************
+TimeStamp->new log: 05/09/2020, 20:34:25
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
+****************************************
+TimeStamp->new log: 05/17/2020, 17:12:59
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
+****************************************
+TimeStamp->new log: 05/19/2020, 14:08:21
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
+****************************************
+TimeStamp->new log: 05/19/2020, 14:15:25
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.00.2
+Oops, something went wrong, while connecting the socket
+S: Oops, something went wrong, while connecting the socket
+****************************************
+TimeStamp->new log: 05/19/2020, 14:43:02
+S: socket is created on 127.0.0.1 port 8080
+S: waiting for client message !
+C: com-0 127.0.0.1
+S: com-0 accept 127.0.0.1
+C: com-0 accept 127.0.0.1
+Client has accepted the connection !
