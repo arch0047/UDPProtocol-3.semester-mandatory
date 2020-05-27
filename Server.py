@@ -50,11 +50,8 @@ else:
 
 # Client second message as acknowledge message
 data, address = soc.recvfrom(1024)
-msg = data.decode().split(" ")
-msg[0] = 'com-0'
-msg[1] = 'accept'
 
-if msg[0] == 'com-0' and msg[1] == 'accept':  # if true
+if data.decode() == 'com-0 accept':  # if true
     print('C: ' + data.decode())
     LogFile.write('C: ' + data.decode() + "\n")
     print('Client has accepted the connection !')
@@ -127,6 +124,9 @@ while mStr != 'Exit' and mStr != 'exit':
             soc.close()
             sys.exit()
 
+        elif (mStr==''):
+            mStr = mStr # Do nothing (no action in this case)
+
         else: # wrong message count, close the server after sending message to client
             print('S:msg-' + str(count) + ' = ' + wrongCmsgNr)
             sMsgCount = str(count) + ':' + wrongCmsgNr
@@ -141,6 +141,8 @@ while mStr != 'Exit' and mStr != 'exit':
         if err == 'timed out':
             response = "con-res 0xFE"
             # Server sends a special packet to client for shutting down the server
+
+            count += 1  # increase server response counter by one
             sMsgCount = str(count) + ':' + response
             soc.sendto(sMsgCount.encode(), address)
             print('S:con-res 0xFE')

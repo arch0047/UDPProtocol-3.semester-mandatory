@@ -59,12 +59,12 @@ print('C: ' + request_message)
 request_message_encoded = request_message.encode()
 soc.sendto(request_message_encoded, server_address)
 
-# client receives the acceptance message from the server and decodes the data
+# client receives the acceptance message
 data, address2 = soc.recvfrom(1024)
 decoded_data = data.decode()
 print('S:' + decoded_data)
 
-# if data = 'com-0 accept ,127.0.0.1' and server is the same client accept the connection
+# client sends accept message
 if address2 == server_address and decoded_data == 'com-0 accept 127.0.0.1':
     connection_accept = 'com-0 accept'
 
@@ -91,7 +91,7 @@ TIMEOUT = 10  # if time out set to 4 second then client need to wait for 5 secon
 # client side console wait to write a message instead writing a self message for the console.
 
 
-while mStr != 'Exit' and mStr != 'exit':
+while mStr != 'Exit' and mStr != 'exit' and tw_handshake_complete == True:
 
     # send 25 package automatically in 1 second when "default_package_size"  is set
     # less <= 25
@@ -127,9 +127,9 @@ while mStr != 'Exit' and mStr != 'exit':
 
         if mStr == " ":
             mStr = 'con-res 0xFF'
+            count = count + 1
             cMsgCount = str(count) + ':' + mStr
             soc.sendto(cMsgCount.encode(), server_address)
-            count = count + 1
             mStr = 'Exit'
             soc.close()
         else:
@@ -150,6 +150,7 @@ while mStr != 'Exit' and mStr != 'exit':
             mStr = 'con-res 0xFE'
             print('S:' + mStr)
             cStrMessage = 'con-res 0xFF'
+            count = count + 1
             cMsgCount = str(count) + ':' + cStrMessage
             soc.sendto(cMsgCount.encode(), server_address)
             count = count + 1
