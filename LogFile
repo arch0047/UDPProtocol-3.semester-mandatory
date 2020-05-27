@@ -1,6 +1,6 @@
 
 ****************************************
-TimeStamp->new log: 05/23/2020, 19:27:05
+TimeStamp->new log: 05/26/2020, 13:35:44
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -8,7 +8,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:00:33
+TimeStamp->new log: 05/26/2020, 20:05:32
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -16,7 +16,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:01:31
+TimeStamp->new log: 05/26/2020, 20:25:06
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -24,7 +24,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:09:33
+TimeStamp->new log: 05/26/2020, 20:26:17
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -32,7 +32,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:10:23
+TimeStamp->new log: 05/26/2020, 20:26:54
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -40,7 +40,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:11:39
+TimeStamp->new log: 05/26/2020, 20:28:14
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -48,7 +48,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:12:27
+TimeStamp->new log: 05/26/2020, 20:31:22
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -56,7 +56,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:13:02
+TimeStamp->new log: 05/26/2020, 20:32:10
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -64,7 +64,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:14:12
+TimeStamp->new log: 05/26/2020, 20:34:32
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1
@@ -72,15 +72,7 @@ S: com-0 accept 127.0.0.1
 C: com-0 accept
 Client has accepted the connection !
 ****************************************
-TimeStamp->new log: 05/23/2020, 21:27:31
-S: socket is created on 127.0.0.1 port 8080
-S: waiting for client message !
-C: com-0 127.0.0.1
-S: com-0 accept 127.0.0.1
-C: com-0 accept
-Client has accepted the connection !
-****************************************
-TimeStamp->new log: 05/23/2020, 21:28:26
+TimeStamp->new log: 05/26/2020, 20:34:54
 S: socket is created on 127.0.0.1 port 8080
 S: waiting for client message !
 C: com-0 127.0.0.1

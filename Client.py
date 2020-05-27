@@ -12,19 +12,21 @@ with open(filepath) as fp:
     # if the read line have text then continue reading otherwise exit the while loop
     while line:
         if cnt == 1:
-            KeepALive, value = line.split(":")  # spliting the line at :
+            KeepALive, value = line.split(":")  # splitting the line at :
             KeepALive = value.strip()  # Removing white space from the line
 
         if cnt == 2:
-            default_package_size, value = line.split(":")  # spliting the line at :
+            default_package_size, value = line.split(":")  # splitting the line at :
             default_package_size = int(value.strip())  # Removing the white space from the line
 
         line = fp.readline()
         cnt += 1
-    # End of reading flie configuration method
+    # End of reading file configuration method
 
-# client sends a hearbeat  to the server every 3rd seconds
+# client sends a heartbeat  to the server every 3rd seconds
 dummyCount = 0
+
+
 def heart_beat():
     if KeepALive == "True":
         Timer(4.0, heart_beat).start()  # timer with 2 parameter
@@ -33,6 +35,7 @@ def heart_beat():
         return
     else:
         return
+
 
 # Create a UDP socket
 # SOCK_DGRAM UDP protocol
@@ -46,7 +49,7 @@ print("Socket successfully created")
 
 client_ip = '127.0.0.1'
 
-#Hack_ip= '127.00.2'     #  ip address "To Hack Myself"
+# Hack_ip= '127.00.2'     #  ip address "To Hack Myself"
 
 # client makes a Connection request and send it to the server
 request_message = 'com-0 ' + client_ip
@@ -80,11 +83,13 @@ else:
 count = 0
 AutoMsg_count = 0
 mStr = ' '
-cMsgCount = ' ' #message with count
+cMsgCount = ' '  # message with count
 startTime = 0
 endTime = 0
-TIMEOUT = 5  # if time out set to 4 second then client need to wait for 5 second and then show the timeout message and perss enter
-# this is to avoid the situation where client side console wait to write a messgae instead writing a self message for the console.
+TIMEOUT = 10  # if time out set to 4 second then client need to wait for 5 second and
+# then show the timeout message and press enter this is to avoid the situation where
+# client side console wait to write a message instead writing a self message for the console.
+
 
 while mStr != 'Exit' and mStr != 'exit':
 
@@ -94,9 +99,17 @@ while mStr != 'Exit' and mStr != 'exit':
     startTime = time.time()
 
     while default_package_size > AutoMsg_count and AutoMsg_count < 25 and endTime - startTime <= 1:
-        AutoMsgStr = str(AutoMsg_count) + ':' + 'Automatic_sending -' + str(AutoMsg_count)
+        AutoMsgStr = str(count) + ':' + 'Automatic_message-' + str(AutoMsg_count)
         soc.sendto(AutoMsgStr.encode(), server_address)
-        AutoMsg_count += 1
+        print('C:msg-' + str(count) + ' = ' + 'Automatic_message'+ str(AutoMsg_count))
+        AutoMsg_count += 1  # package message count
+
+        # server message count and message
+        data, address2 = soc.recvfrom(1024)
+        sMsg = data.decode().split(":")
+        count = int(sMsg[0])
+        print('S:res-' + str(count) + ' = ' + sMsg[1])
+        count += 1  # client message counter
         endTime = time.time()
 
     heart_beat()
